@@ -62,12 +62,6 @@
         notice.hidden = !new URLSearchParams(window.location.search).has(notice.dataset.queryParam);
     });
 
-    fetch('/api/auth/me', {credentials: 'same-origin'})
-        .then(response => {
-            if (response.ok) window.location.replace('/dashboard');
-        })
-        .catch(() => {});
-
     loginForm.addEventListener('submit', async event => {
         event.preventDefault();
         const submitButton = loginForm.querySelector('button[type="submit"]');

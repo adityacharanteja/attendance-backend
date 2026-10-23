@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 @Controller
 public class HomeController {
 
-    @GetMapping("/")
+    @GetMapping({"/", "/dashboard"})
     public String home(Authentication authentication, Model model) {
         model.addAttribute("userEmail", authentication.getName());
         return "index";

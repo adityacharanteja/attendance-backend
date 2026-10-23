@@ -23,7 +23,7 @@
             <h2>Create your account</h2>
             <p class="form-intro">Set up your attendance workspace in a moment.</p>
 
-            <form id="registrationForm" action="/api/auth/register" th:action="@{/api/auth/register}" method="post" class="auth-form">
+            <form id="registrationForm" action="/api/auth/register" th:action="@{/api/auth/register}" method="post" class="auth-form" th:object="${registrationForm}">
                 <label for="fullName">Your name</label>
                 <input id="fullName" name="fullName" th:field="*{fullName}" type="text" autocomplete="name" placeholder="Full name" required>
                 <p class="field-error" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}"></p>
