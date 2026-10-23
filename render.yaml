@@ -1,1 +1,6 @@
-
+services:
+  - type: web
+    name: attendance-backend
+    runtime: docker
+    plan: free
+    healthCheckPath: /
